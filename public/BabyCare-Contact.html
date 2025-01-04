@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Fredoka", sans-serif;  
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: rgb(231, 223, 230);
+            background-image: url(images/background-1.jpg);
+            background-position:center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .form-box{
+                width: 70%;
+                height: 100vh;
+                background-color:transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+        form{
+            width: 85%;
+            height: 100%;
+            padding: 10px;
+        }
+        form::-webkit-scrollbar{
+            width: 0;
+        }
+        .head{
+            display: flex;
+            justify-content: center;
+        }
+        .head h1{
+            text-align: center;
+            font-size: 34px;
+            color:#FF4880;
+            position: relative;
+            border-bottom:2px solid #FF4880;
+            padding:0 5px 5px;
+            margin-bottom: 20px;
+            border-bottom-left-radius: 15%;
+            border-bottom-right-radius: 15%;
+
+        }
+        .baby-details{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .baby-details .input_group{
+            width: 48%;
+        }
+        .baby-details input{
+            width: 100%;
+        }
+        .input_group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        input{
+            border: none;
+            outline: 1px solid gray;
+            background-color: transparent;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            color: #0d6efd;
+        }
+        label{
+            font-size: 26px;
+        }
+        textarea{
+            font-size: 18px;
+            padding: 10px;
+            background-color: transparent;
+        }
+        .submit{
+            border-radius: 5px;
+            width: 100%;
+            height: 50px;
+            font-size: 26px;
+            border: none;
+            outline: none;
+            background-color:  #0d6efd;
+            color: white;
+            cursor: pointer;
+        }
+        textarea:focus{
+            outline: none;
+        }
+        .input_group.success input{
+            outline: 1px solid green;
+        }
+        .input_group.error input{
+            outline: 1px solid red;
+        }
+        .input_group.error .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        @media screen and (max-width:425px) {
+            .form-box{
+                width: 100%;
+            }
+            form{
+                width: 100%;
+                overflow-y: auto;
+            }
+            .baby-details{
+                flex-direction: column;
+            }
+            .baby-details .input_group{
+            width: 100%;
+        }
+        }
+        @media screen and (min-width:425px) and (max-width:768px) {
+            .form-box{
+                width: 95%;
+                height: 100vh;
+                background-color:transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            form{
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                padding: 10px;
+            }
+        }
+
+    </style>
+    <section>
+        <div class="form-box">
+            <form action="" id="form">
+                <div class="head">
+                    <h1>Application</h1>
+                </div>
+                <div class="baby-details">
+
+                    <div class="input_group">
+                        <label for="baby-name">Baby Name : </label>
+                        <input type="text"  id="baby-name" name="B_name" placeholder="Name" autocomplete="off">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input_group">
+                        <label for="baby-age" >Baby Age : </label>
+                        <input type="number" id="baby-age" name="B-age" placeholder="Age" autocomplete="off"> 
+                        <div class="error"></div>
+                    </div>
+
+                </div>
+
+                <div class="parent-details">
+                    <div class="input_group">
+                        <label for="P_name">Parent Name : </label>
+                        <input type="text" id="P_name" name="P_name" placeholder="Parent Name" autocomplete="off">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input_group">
+                        <label for="number">Phone Number : </label>
+                        <input type="number" id="number" name="number" placeholder="Phone Number" autocomplete="off">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input_group">
+                        <label for="email">Email : </label>
+                        <input type="text" id="email" name="email" placeholder="Email Id" autocomplete="off">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input_group">
+                        <label for="message">Message : </label>
+                        <textarea name="message" id="message" rows="3" placeholder="Message..."></textarea>
+                    </div>
+                    <button type="submit" class="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const babyName = document.getElementById('baby-name');
+        const babyAge = document.getElementById('baby-age');
+        const parentName = document.getElementById('P_name');
+        const PhoneNumber = document.getElementById('number');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        const formSubmit = document.querySelector('#form');
+
+        emailjs.init('7lmjeHQ_ZdKErQrpd');
+
+        formSubmit.addEventListener('submit',(event)=>{
+            event.preventDefault();
+
+            if(!formValidation()){
+                return;
+            }
+
+            const serviceID = 'service_8asrp8p'; 
+            const templateID = 'template_11tgy3q'; 
+
+            emailjs.sendForm(serviceID,templateID,formSubmit)
+                .then(()=>{
+                    alert('Form is submited succesfully')
+                    formSubmit.reset()
+                })
+                .catch((err)=>{
+                        console.log('submition faild error : ' +  err)
+                })
+            })
+    
+
+        const formValidation = ()=>{
+            const babyNameVal = babyName.value.trim();
+            const babyAgeVal = babyAge.value.trim();
+            const parentNameVal = parentName.value.trim();
+            const PhoneNumberVal = PhoneNumber.value.trim();
+            const emailVal = email.value.trim();
+            let successForm = true;
+
+            if(babyNameVal === ''){
+                setError(babyName,'Name is Required!')
+                successForm = false;
+            }else{
+                setSuccess(babyName)
+            }
+
+            if(babyAgeVal === ''){
+                setError(babyAge,'Age is Required!')
+                successForm = false;
+            }
+            else if(babyAgeVal >= 6){
+                setError(babyAge,'Child allowable age is (6-month to 5years) only!')
+                successForm = false;
+            }
+            else{
+                setSuccess(babyAge)
+            }
+
+            if(parentNameVal === ''){
+                setError(parentName,'Name is Required!')
+                successForm = false;
+            }else{
+                setSuccess(parentName)
+            }
+
+            if(PhoneNumberVal === ''){
+                setError(PhoneNumber,'Number is Required!')
+                successForm = false;
+            }
+            else if(PhoneNumberVal.length < 10){
+                setError(PhoneNumber,'Please enter valid Mobile Number!')
+            }
+            else{
+                setSuccess(PhoneNumber)
+            }
+
+            if(emailVal === ''){
+                setError(email,'Email is Required!')
+                successForm = false;
+            }
+            else if(!emailValidation(emailVal)){
+                setError(email,'Please enter valid Email address!')
+                successForm = false;
+            }else{
+                setSuccess(email)
+            }
+            return successForm;
+        }
+
+        const setError = (element,message)=>{
+            let inputGroup = element.parentElement;
+            let errorMessage = inputGroup.querySelector('.error');
+            errorMessage.innerText = message;
+            inputGroup.classList.add('error');
+            inputGroup.classList.remove('success')
+
+        }
+
+        const setSuccess = (element)=>{
+            let inputGroup = element.parentElement;
+            let errorMessage = inputGroup.querySelector('.error');
+            errorMessage.innerText = '';
+            inputGroup.classList.add('success');
+            inputGroup.classList.remove('error')
+        }
+
+        function emailValidation(email){
+             const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+             return emailRegex.test(email)
+        }
+    </script>
+</body>
+</html>
