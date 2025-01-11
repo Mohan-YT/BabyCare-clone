@@ -2091,7 +2091,7 @@ body main{
         height: max-content;
     }
     .program-content .amount{
-        left: 30.5vw;
+        left: 33%;
     }
     .program-content h2{
         font-size: 27px;
@@ -2132,19 +2132,21 @@ body main{
     }
     .event-content .event-date{
         position: absolute;
-        left:30.5vw;
+        left:33%;
     }
     .event-content .event-image .image{
         width: 90vw;
         height: max-content;
     }
     .event-content .image img{
-        width: 90vw;
+        width: 100%;
         height: max-content;
+        
     }
     .event-content .zoom-pic i{
-        top: 95px;
-        left: 130px;
+        position: absolute;
+        top:21% ;
+        left: 47%;
     }
     .event-content .event-p{
         height: max-content;
@@ -2274,8 +2276,8 @@ body main{
     .team-icons{
         width: 100%;
         height: max-content;
-        justify-content: center !important;
-        margin: 1em;
+        justify-content: space-around !important;
+        margin: 1.2em;
     }
     .team-icon{
         margin:0.2em 0.5em;
