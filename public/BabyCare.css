@@ -1944,8 +1944,8 @@ body main{
     .section1{
         background-image: url(images/hero-img.jpg);
         background-color: rgba(0, 0, 0, 0.295);
-        width: 100vw;
-        height: 100%;
+        width: 100%;
+        height: auto;
         background-size:cover;
         background-repeat: no-repeat;
         background-position:center;
@@ -1957,6 +1957,7 @@ body main{
     }
     .section1 .homepage-content{
         width:100vw;
+        height: auto;
         padding: 10px;
         margin: 0 0 0 0;
 
@@ -2002,16 +2003,18 @@ body main{
         width: 100vw;
     }
     .vedio img{
-        width: 280px;
-        height: 320px;
+        position: relative;
+        width: 90vw;
+        height: 300px;
     }
     .vedio button{
-        left: 90px;
-        top: 110px;
+        position: absolute;
+        left: 31.5vw;
+        top: 100px;
     }
     .vedio .animation{
-        left: 90px;
-        top: 110px;
+        left: 31.5vw;
+        top: 100px;
     }
     .about-container{
        flex-direction: column;
@@ -2054,8 +2057,8 @@ body main{
         font-size: 35px;
     }
     .service-main{
-        width: 280px;
-        height: 450px;
+        width: 90vw;
+        height: auto;
     }
     .section3 .service-content a i{
         font-size: 80px;
@@ -2076,19 +2079,19 @@ body main{
         margin: 10px 15px;
     }
     .section4 .program-content{
-        width: 280px;
+        width: 90vw;
         margin: 25px 20px;
     }
     .program-content .image-box{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height:max-content;
     }
     .program-content .image-box .image{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height: max-content;
     }
     .program-content .amount{
-        left: 90px;
+        left: 30.5vw;
     }
     .program-content h2{
         font-size: 27px;
@@ -2123,26 +2126,28 @@ body main{
         margin: 10px;
     }
     .section5 .event-container .event-content{
-        width: 280px;
-        height: 450px;
+        position: relative;
+        width: 90vw;
+        height: max-content;
     }
     .event-content .event-date{
-        left: 90px;
+        position: absolute;
+        left:30.5vw;
     }
     .event-content .event-image .image{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height: max-content;
     }
     .event-content .image img{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height: max-content;
     }
     .event-content .zoom-pic i{
         top: 95px;
         left: 130px;
     }
     .event-content .event-p{
-        height: 210px;
+        height: max-content;
         padding: 18px 13px;
     }
 
@@ -2192,7 +2197,7 @@ body main{
     }
     .section6 .blog-content{
         margin: 30px 10px;
-        width: 280px;
+        width: 90vw;
         border: none;
         background-color:rgb(253, 229, 238);
         border-top-left-radius: 50% 10%;
@@ -2201,12 +2206,12 @@ body main{
         border-bottom-right-radius:10px ;
     }
     .section6 .blog-content .blog-image{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height: max-content;
     }
     .section6 .blog-content .blog-image img{
-        width: 280px;
-        height: 210px;
+        width: 90vw;
+        height: max-content;
     }
     .blog-content .blog-prg h1{
         font-size: 26px;
@@ -2259,6 +2264,21 @@ body main{
     }
     .team-container .team-content{
         margin: 25px 10px;
+        width: 90vw;
+        height: fit-content;
+    }
+    .team-content .team-image img{
+        width: 100%;
+        height: max-content;
+    }
+    .team-icons{
+        width: 100%;
+        height: max-content;
+        justify-content: center !important;
+        margin: 1em;
+    }
+    .team-icon{
+        margin:0.2em 0.5em;
     }
 
 
@@ -2297,8 +2317,8 @@ body main{
         margin-left: 18px;
     }
     .testimonial-container .testimonial-content{
-        width: 305px;
-        height: 420px;
+        width: 95%;
+        height: max-content;
         padding: 15px 10px 20px;
         margin: 10px 15px 10px;
     }
