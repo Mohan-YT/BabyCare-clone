@@ -2009,11 +2009,11 @@ body main{
     }
     .vedio button{
         position: absolute;
-        left: 31.5vw;
+        left: 34%;
         top: 100px;
     }
     .vedio .animation{
-        left: 31.5vw;
+        left: 34%;
         top: 100px;
     }
     .about-container{
@@ -2091,7 +2091,7 @@ body main{
         height: max-content;
     }
     .program-content .amount{
-        left: 33%;
+        left: 34%;
     }
     .program-content h2{
         font-size: 27px;
@@ -2132,7 +2132,7 @@ body main{
     }
     .event-content .event-date{
         position: absolute;
-        left:33%;
+        left:34%;
     }
     .event-content .event-image .image{
         width: 90vw;
