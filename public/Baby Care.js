@@ -23,3 +23,7 @@ window.addEventListener('scroll',function reveal(){
         }
     }
 });
+const section2 = document.querySelector('.section2')
+if(window.innerWidth <= 526){
+    section2.classList.remove('reavel')
+}
